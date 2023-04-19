@@ -1,6 +1,6 @@
 # Proyecto-POO
 ## Proyecto de cartas de POO
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/JorgeFigueroa-Iteso/Proyecto-Progra-3)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/JorgeFigueroa-Iteso/Proyecto-POO)
 
 ## Reporte
 Reporte del proyecto -> [Reporte](https://github.com/JorgeFigueroa-Iteso/Proyecto-POO/blob/main/Entrega%201/Propuesta%20de%20Proyecto%20Integrador.pdf)
