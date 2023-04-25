@@ -1,0 +1,8 @@
+Juego basado en Magic The Gathering
+
+Donde se tendrán cartas de
+ Monstruos: ( -Nombre- , -Tipo-, -Descripción-, -Costo Maná-, -Tipo de Maná-, -Fuerza/Resistencia-)
+ Maná: (-Tipo de Maná "Símbolo"-, -Cantidad de Maná-)
+ Artefactos: (-Costo Maná-, -Descripción-)
+ Hechizos: (-Costo Maná-, -Descripción-)
+ Instantáneos: (-Costo Maná-, -Descripción-)

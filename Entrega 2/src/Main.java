@@ -1,3 +1,4 @@
+import cards.*;
 /**
  * @author Jorge Ramón Figueroa Maya, Juan Pablo Álvarez Camarena
  * @version 1.0
@@ -7,6 +8,12 @@
  * */
 public class Main {
     public static void main(String[] args) {
+        // Crear Mazo
+        // 7 Cartas
 
+
+        // Usar Mazo ((??
+
+        // Dados 4
     }
 }

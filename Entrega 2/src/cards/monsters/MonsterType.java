@@ -1,4 +1,4 @@
-package monsters;
+package cards.monsters;
 
 /**
  * Tipo de Monstruo
