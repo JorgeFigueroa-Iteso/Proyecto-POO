@@ -1,4 +1,4 @@
 package me.jorge.MagicTheGathering.Gui;
 
-public class LoadDeck {
+public class SaveDeckGUI {
 }

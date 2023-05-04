@@ -1,6 +1,6 @@
 package me.jorge.MagicTheGathering;
 
-import me.jorge.MagicTheGathering.Gui.MagicTheGathering;
+import me.jorge.MagicTheGathering.Gui.MagicTheGatheringGUI;
 
 import javax.swing.*;
 
@@ -15,9 +15,9 @@ public class Main {
     public static void main(String[] args) {
         // Graphic Interface
         JFrame frame = new JFrame("Magic The Gathering");
-        frame.setContentPane(new MagicTheGathering().getPanel());
+        frame.setContentPane(new MagicTheGatheringGUI().getPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+        frame.setSize(500, 250);
         frame.setVisible(true);
 
     }

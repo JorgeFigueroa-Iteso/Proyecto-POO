@@ -5,13 +5,14 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class MagicTheGathering implements ActionListener {
+public class MagicTheGatheringGUI implements ActionListener {
     public static void main(String[] args) {
         // Graphic Interface
         JFrame frame = new JFrame("Magic The Gathering");
-        frame.setContentPane(new MagicTheGathering().getPanel());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 250);
         frame.pack();
+        frame.setContentPane(new MagicTheGatheringGUI().getPanel());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
     }
@@ -30,22 +31,27 @@ public class MagicTheGathering implements ActionListener {
         JPanel buttons = new JPanel();
         buttons.setLayout(new GridLayout(2, 2));
 
+
+
         JButton createDeck = new JButton("Create Deck");
         createDeck.addActionListener(this);
-        buttons.add(createDeck);
+        createDeck.setBounds(70, 100, 350, 30);
+        panel.add(createDeck);
 
-        JButton useDeck = new JButton("Use Deck");
+        JButton useDeck = new JButton("Delete Deck");
         useDeck.addActionListener(this);
-        buttons.add(useDeck);
+        useDeck.setBounds(70, 145, 160, 30);
+        panel.add(useDeck);
 
-        JButton saveDeck = new JButton("Save Deck");
-        saveDeck.addActionListener(this);
-        buttons.add(saveDeck);
-
-        JButton loadDeck = new JButton("Load Deck");
+        JButton loadDeck = new JButton("Use Deck");
         loadDeck.addActionListener(this);
-        buttons.add(loadDeck);
+        loadDeck.setBounds(260, 145, 160, 30);
+        panel.add(loadDeck);
 
+        JButton exit = new JButton("Exit");
+        exit.addActionListener(this);
+        exit.setBounds(400, 182, 80, 25);
+        panel.add(exit);
 
 
         panel.add(buttons, BorderLayout.CENTER);
@@ -56,13 +62,13 @@ public class MagicTheGathering implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("Create Deck")) {
-            CreateDeck.createDeck();
+            CreateDeckGUI.createDeck();
+        } else if (e.getActionCommand().equals("Delete Deck")) {
+            // DeleteDeckGUI.deleteDeck();
         } else if (e.getActionCommand().equals("Use Deck")) {
-            // UseDeck.useDeck();
-        } else if (e.getActionCommand().equals("Save Deck")) {
-            // SaveDeck.saveDeck();
-        } else if (e.getActionCommand().equals("Load Deck")) {
-            // LoadDeck.loadDeck();
+             LoadDeckGUI.loadDeck();
+        } else if (e.getActionCommand().equals("Exit")) {
+            System.exit(0);
         }
     }
 

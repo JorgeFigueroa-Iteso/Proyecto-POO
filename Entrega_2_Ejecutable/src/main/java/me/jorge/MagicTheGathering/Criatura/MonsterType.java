@@ -10,14 +10,14 @@ public enum MonsterType {
     Dauti,
     Deidad,
     Efrit,
-    Ejército,
+    Ejercito,
     Felino,
     Fragmentado,
     Germen,
     Gigante,
     Hada,
     Hechicero,
-    Ilusión,
+    Ilusion,
     Infernal,
     Jabalí,
     Kavu,
@@ -36,7 +36,7 @@ public enum MonsterType {
     Rana,
     Rata,
     Talako,
-    Tejón,
+    Tejon,
     Unicornio,
     Uro,
     Vampiro,
@@ -45,5 +45,5 @@ public enum MonsterType {
     Yerbamala,
     Yeti,
     Zombie,
-    Zorro;
+    Zorro
 }
