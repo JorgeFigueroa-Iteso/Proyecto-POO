@@ -1,5 +1,7 @@
 package me.jorge.MagicTheGathering.Gui;
 
+import me.jorge.MagicTheGathering.util.CreateFolder;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -44,7 +46,35 @@ public class MagicTheGatheringGUI implements ActionListener {
         panel.add(useDeck);
 
         JButton loadDeck = new JButton("Use Deck");
-        loadDeck.addActionListener(this);
+        loadDeck.addActionListener(
+                new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CreateFolder.createFolder("Decks");
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setCurrentDirectory(new java.io.File(".\\Decks"));
+                fileChooser.setDialogTitle("Select Deck");
+                fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                fileChooser.setAcceptAllFileFilterUsed(false);
+                // Accept only .json files
+                fileChooser.setFileFilter(new javax.swing.filechooser.FileFilter() {
+                    public boolean accept(java.io.File f) {
+                        return f.getName().toLowerCase().endsWith(".json") || f.isDirectory();
+                    }
+
+                    public String getDescription() {
+                        return "JSON Files (*.json)";
+                    }
+                });
+                if (fileChooser.showDialog(panel, "Use Deck") == JFileChooser.APPROVE_OPTION) {
+                    System.out.println("getCurrentDirectory(): " + fileChooser.getCurrentDirectory());
+                    System.out.println("getSelectedFile() : " + fileChooser.getSelectedFile());
+                } else {
+                    System.out.println("No Selection ");
+                }
+                LoadDeckGUI.loadDeck(fileChooser.getSelectedFile().getName(), fileChooser);
+            }
+        });
         loadDeck.setBounds(260, 145, 160, 30);
         panel.add(loadDeck);
 
@@ -65,8 +95,6 @@ public class MagicTheGatheringGUI implements ActionListener {
             CreateDeckGUI.createDeck();
         } else if (e.getActionCommand().equals("Delete Deck")) {
             DeleteDeckGUI.deleteDeck();
-        } else if (e.getActionCommand().equals("Use Deck")) {
-             LoadDeckGUI.loadDeck();
         } else if (e.getActionCommand().equals("Exit")) {
             System.exit(0);
         }

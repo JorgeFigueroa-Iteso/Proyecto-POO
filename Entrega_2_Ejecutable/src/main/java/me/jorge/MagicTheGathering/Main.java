@@ -3,6 +3,7 @@ package me.jorge.MagicTheGathering;
 import me.jorge.MagicTheGathering.Gui.MagicTheGatheringGUI;
 
 import javax.swing.*;
+import java.awt.Toolkit;
 
 /**
  * Program to save Magic The Gathering cards as a deck
@@ -19,6 +20,7 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 250);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(frame.getFocusOwner());
 
     }
 }

@@ -10,6 +10,8 @@ public class DeleteDeckGUI implements ActionListener {
     public static void deleteDeck() {
         JFrame frame = new JFrame("Delete Deck");
         frame.setSize(500, 250);
+        frame.setLocationRelativeTo(frame.getFocusOwner());
+
 
         DeleteDeckGUI deleteDeckGUI = new DeleteDeckGUI();
         frame.add(deleteDeckGUI.getPanel(frame));

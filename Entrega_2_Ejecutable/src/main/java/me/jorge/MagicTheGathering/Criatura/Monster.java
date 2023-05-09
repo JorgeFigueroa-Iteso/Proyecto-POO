@@ -24,4 +24,21 @@ public class Monster {
             this.type = MonsterType.Hechicero;
         }
     }
+
+    // Getters
+    public String getName() {
+        return this.name;
+    }
+    public MonsterType getType() {
+        return this.type;
+    }
+    public int getManaCost() {
+        return this.manaCost;
+    }
+    public int getDamage() {
+        return this.damage;
+    }
+    public int getLife() {
+        return this.life;
+    }
 }

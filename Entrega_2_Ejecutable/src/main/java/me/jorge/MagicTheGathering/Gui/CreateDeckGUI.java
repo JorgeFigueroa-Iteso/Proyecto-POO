@@ -2,6 +2,8 @@ package me.jorge.MagicTheGathering.Gui;
 
 import me.jorge.MagicTheGathering.Mana.ManaSymbol;
 import me.jorge.MagicTheGathering.util.CreateDeck;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import javax.swing.JPanel;
 import javax.swing.JFrame;
@@ -23,6 +25,7 @@ public class CreateDeckGUI implements ActionListener {
         frame.setSize(1100, 500);
         // Divide the frame in 7 columns and 4 rows
 //        frame.setLayout(new GridLayout(4, 7));
+        frame.setLocationRelativeTo(frame.getFocusOwner());
 
         CreateDeckGUI createDeck = new CreateDeckGUI();
 
@@ -233,8 +236,49 @@ public class CreateDeckGUI implements ActionListener {
                 String card6 = TipoMana5.getSelectedItem() + " " + card6ManaQuantityText.getText();
                 String card7 = card7NameText.getText() + " " + card7DescriptionText.getText() + " " + card7ManaCostText.getText();
 
+                JSONArray monsterContent = new JSONArray();
+                monsterContent.add(card1NameText.getText());
+                monsterContent.add(TipoMonstruo.getSelectedItem());
+                monsterContent.add(card1ManaCostText.getText());
+                monsterContent.add(card1LifeText.getText());
+                monsterContent.add(card1DamageText.getText());
+
+                JSONArray manaContent1 = new JSONArray();
+                manaContent1.add(TipoMana.getSelectedItem());
+                manaContent1.add(card2ManaQuantityText.getText());
+
+                JSONArray manaContent2 = new JSONArray();
+                manaContent2.add(TipoMana2.getSelectedItem());
+                manaContent2.add(card3ManaQuantityText.getText());
+
+                JSONArray manaContent3 = new JSONArray();
+                manaContent3.add(TipoMana3.getSelectedItem());
+                manaContent3.add(card4ManaQuantityText.getText());
+
+                JSONArray manaContent4 = new JSONArray();
+                manaContent4.add(TipoMana4.getSelectedItem());
+                manaContent4.add(card5ManaQuantityText.getText());
+
+                JSONArray manaContent5 = new JSONArray();
+                manaContent5.add(TipoMana5.getSelectedItem());
+                manaContent5.add(card6ManaQuantityText.getText());
+
+                JSONArray instantContent = new JSONArray();
+                instantContent.add(card7NameText.getText());
+                instantContent.add(card7DescriptionText.getText());
+                instantContent.add(card7ManaCostText.getText());
+
+                JSONObject DeckContent = new JSONObject();
+                DeckContent.put("Monster", monsterContent);
+                DeckContent.put("Mana1", manaContent1);
+                DeckContent.put("Mana2", manaContent2);
+                DeckContent.put("Mana3", manaContent3);
+                DeckContent.put("Mana4", manaContent4);
+                DeckContent.put("Mana5", manaContent5);
+                DeckContent.put("Instant", instantContent);
+
                 CreateDeck createDeck = new CreateDeck();
-                createDeck.createDeck(deckName, card1, card2, card3, card4, card5, card6, card7);
+                createDeck.createDeck(deckName, DeckContent);
 
             }
         });
