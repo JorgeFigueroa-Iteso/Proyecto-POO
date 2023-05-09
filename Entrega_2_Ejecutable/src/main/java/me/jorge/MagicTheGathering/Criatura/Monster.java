@@ -1,5 +1,7 @@
 package me.jorge.MagicTheGathering.Criatura;
 
+import me.jorge.MagicTheGathering.Gui.MonsterType;
+
 public class Monster {
     private String name;
     private MonsterType type;

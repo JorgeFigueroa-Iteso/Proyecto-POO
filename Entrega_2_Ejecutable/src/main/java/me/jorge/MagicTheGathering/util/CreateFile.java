@@ -1,7 +1,7 @@
 package me.jorge.MagicTheGathering.util;
 
 import com.google.gson.Gson;
-import org.json.simple.JSONObject;
+import org.json.*;
 
 import javax.swing.*;
 import java.io.FileWriter;

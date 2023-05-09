@@ -64,7 +64,7 @@ public class MagicTheGatheringGUI implements ActionListener {
         if (e.getActionCommand().equals("Create Deck")) {
             CreateDeckGUI.createDeck();
         } else if (e.getActionCommand().equals("Delete Deck")) {
-            // DeleteDeckGUI.deleteDeck();
+            DeleteDeckGUI.deleteDeck();
         } else if (e.getActionCommand().equals("Use Deck")) {
              LoadDeckGUI.loadDeck();
         } else if (e.getActionCommand().equals("Exit")) {

@@ -1,6 +1,6 @@
 package me.jorge.MagicTheGathering.util;
 
-import org.json.simple.JSONObject;
+import org.json.*;
 
 import javax.swing.*;
 import java.io.FileWriter;
@@ -33,7 +33,8 @@ public class CreateFileOiginal {
         System.out.println("Writing deck to file...");
         try {
             FileWriter file = new FileWriter(fileName);
-            file.write(deck.toJSONString());
+//            file.write(deck.toJSONString());
+            file.write(deck.toString());
             file.close();
 
         } catch (Exception e) {

@@ -1,4 +1,4 @@
-package me.jorge.MagicTheGathering.Criatura;
+package me.jorge.MagicTheGathering.Gui;
 
 public enum MonsterType {
     Abanderado,
