@@ -1,10 +1,10 @@
 package me.jorge.MagicTheGathering.Mana;
 
 public class Mana {
-    private ManaType manaType = null;
+    private ManaSymbol manaType = null;
     private int quantity = 0;
 
-    public Mana(ManaType manaType, int quantity) {
+    public Mana(ManaSymbol manaType, int quantity) {
         setManaType(manaType);
         setQuantity(quantity);
     }
@@ -17,16 +17,16 @@ public class Mana {
         }
     }
 
-    private void setManaType(ManaType manaType) {
-        if (ManaVerifier.isManaSymbol(manaType.getSymbol().toString())) {
+    private void setManaType(ManaSymbol manaType) {
+        if (manaType != null) {
             this.manaType = manaType;
         } else {
-            this.manaType = ManaType.Colorless;
+            this.manaType = ManaSymbol.C;
         }
     }
 
     public ManaType getManaType() {
-        return this.manaType;
+        return this.manaType.getManaType();
     }
 
     public int getQuantity() {

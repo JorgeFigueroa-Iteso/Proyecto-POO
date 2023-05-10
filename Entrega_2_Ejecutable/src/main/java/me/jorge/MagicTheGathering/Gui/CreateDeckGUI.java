@@ -228,39 +228,32 @@ public class CreateDeckGUI implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String deckName = nameText.getText();
-                String card1 = card1NameText.getText() + " " + TipoMonstruo.getSelectedItem() + " " + card1ManaCostText.getText() + " " + card1LifeText.getText() + " " + card1DamageText.getText();
-                String card2 = TipoMana.getSelectedItem() + " " + card2ManaQuantityText.getText();
-                String card3 = TipoMana2.getSelectedItem() + " " + card3ManaQuantityText.getText();
-                String card4 = TipoMana3.getSelectedItem() + " " + card4ManaQuantityText.getText();
-                String card5 = TipoMana4.getSelectedItem() + " " + card5ManaQuantityText.getText();
-                String card6 = TipoMana5.getSelectedItem() + " " + card6ManaQuantityText.getText();
-                String card7 = card7NameText.getText() + " " + card7DescriptionText.getText() + " " + card7ManaCostText.getText();
 
                 JSONArray monsterContent = new JSONArray();
                 monsterContent.add(card1NameText.getText());
-                monsterContent.add(TipoMonstruo.getSelectedItem());
+                monsterContent.add(TipoMonstruo.getSelectedItem().toString());
                 monsterContent.add(card1ManaCostText.getText());
                 monsterContent.add(card1LifeText.getText());
                 monsterContent.add(card1DamageText.getText());
 
                 JSONArray manaContent1 = new JSONArray();
-                manaContent1.add(TipoMana.getSelectedItem());
+                manaContent1.add(TipoMana.getSelectedItem().toString());
                 manaContent1.add(card2ManaQuantityText.getText());
 
                 JSONArray manaContent2 = new JSONArray();
-                manaContent2.add(TipoMana2.getSelectedItem());
+                manaContent2.add(TipoMana2.getSelectedItem().toString());
                 manaContent2.add(card3ManaQuantityText.getText());
 
                 JSONArray manaContent3 = new JSONArray();
-                manaContent3.add(TipoMana3.getSelectedItem());
+                manaContent3.add(TipoMana3.getSelectedItem().toString());
                 manaContent3.add(card4ManaQuantityText.getText());
 
                 JSONArray manaContent4 = new JSONArray();
-                manaContent4.add(TipoMana4.getSelectedItem());
+                manaContent4.add(TipoMana4.getSelectedItem().toString());
                 manaContent4.add(card5ManaQuantityText.getText());
 
                 JSONArray manaContent5 = new JSONArray();
-                manaContent5.add(TipoMana5.getSelectedItem());
+                manaContent5.add(TipoMana5.getSelectedItem().toString());
                 manaContent5.add(card6ManaQuantityText.getText());
 
                 JSONArray instantContent = new JSONArray();

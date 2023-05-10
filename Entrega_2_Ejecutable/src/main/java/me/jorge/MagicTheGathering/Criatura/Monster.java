@@ -41,4 +41,15 @@ public class Monster {
     public int getLife() {
         return this.life;
     }
+    // toString
+    @Override
+    public String toString() {
+        return "Monster{" +
+                "\n\t\"name\":\"" + name + "\",\n" +
+                "\t\"type\":\"" + type + "\",\n" +
+                "\t\"manaCost\":\"" + manaCost + "\",\n" +
+                "\t\"damage\":\"" + damage + "\",\n" +
+                "\t\"life\":\"" + life + "\"\n" +
+                "}";
+    }
 }

@@ -5,6 +5,7 @@ import javafx.embed.swing.JFXPanel;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
+import me.jorge.MagicTheGathering.util.LoadDeck;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,6 +30,10 @@ public class LoadDeckGUI {
     }
 
     private JPanel getPanel(JFrame frame, String name, JFileChooser deck){
+
+        LoadDeck loadDeck = new LoadDeck();
+        loadDeck.loadDeck(name, deck);
+
         //JPanel for 7 cards
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(1, 8));
