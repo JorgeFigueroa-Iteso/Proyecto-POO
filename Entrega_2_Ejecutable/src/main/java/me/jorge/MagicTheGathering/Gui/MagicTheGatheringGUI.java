@@ -106,6 +106,16 @@ public class MagicTheGatheringGUI implements ActionListener {
         }
     }
 
+    public void start() {
+        // Graphic Interface
+        JFrame frame = new JFrame("Magic The Gathering");
+        frame.setContentPane(new MagicTheGatheringGUI().getPanel());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(500, 250);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(frame.getFocusOwner());
+    }
+
     //q: how to make the buttons do something?
     //a: add an action listener to the button
 }

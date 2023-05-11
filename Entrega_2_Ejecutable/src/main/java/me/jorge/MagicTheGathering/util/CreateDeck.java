@@ -1,6 +1,5 @@
 package me.jorge.MagicTheGathering.util;
 
-import org.json.*;
 import org.json.simple.JSONObject;
 
 import javax.swing.*;
@@ -17,16 +16,12 @@ public class CreateDeck{
         // Show Deck content
         JOptionPane.showMessageDialog(panel, "Deck " + deckName + " created\n" + Deck, "Deck Created", JOptionPane.INFORMATION_MESSAGE);
         new CreateFolder().createFolder("Decks");
-
-        // Create a file with the deck name in JSON format
-//        CreateFile createFile = new CreateFile();
-//        createFile.createFile("Decks/" + deckName + ".json", deckName, card1, card2, card3, card4, card5, card6, card7);
-
         // Write JSON file
         try {
             FileWriter file = new FileWriter("Decks/" + deckName + ".json");
             file.write(Deck.toJSONString());
             file.close();
+            file = null;
             JOptionPane.showMessageDialog(panel, "Deck " + deckName + " created", "Deck Created", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
             e.printStackTrace();

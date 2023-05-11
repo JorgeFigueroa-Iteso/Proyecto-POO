@@ -38,7 +38,7 @@ public class DeleteDeckGUI implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
-                fileChooser.setCurrentDirectory(new java.io.File("."));
+                fileChooser.setCurrentDirectory(new java.io.File(".\\Decks"));
                 fileChooser.setDialogTitle("Delete Deck");
                 fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
                 // Accept only .json files

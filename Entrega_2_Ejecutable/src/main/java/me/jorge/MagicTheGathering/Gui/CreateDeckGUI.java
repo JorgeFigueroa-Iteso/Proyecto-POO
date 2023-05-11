@@ -23,8 +23,6 @@ public class CreateDeckGUI implements ActionListener {
     public static void createDeck() {
         JFrame frame = new JFrame("Create Deck");
         frame.setSize(1100, 500);
-        // Divide the frame in 7 columns and 4 rows
-//        frame.setLayout(new GridLayout(4, 7));
         frame.setLocationRelativeTo(frame.getFocusOwner());
 
         CreateDeckGUI createDeck = new CreateDeckGUI();
