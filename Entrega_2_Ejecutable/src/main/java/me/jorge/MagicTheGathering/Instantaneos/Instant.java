@@ -53,12 +53,7 @@ public class Instant {
     }
 
     public String toString() {
-        return "{\n" +
-                "\t\"name\": \"" + this.name + "\",\n" +
-                "\t\"description\": \"" + this.description + "\",\n" +
-                "\t\"manaCost\": \"" + this.manaCost + "\",\n" +
-                "\t\"type\": \"" + this.type + "\"\n" +
-                "}";
+        return "Instant:  " + this.name + "\n\tDescription:  " + this.description + "\n\nMana:  " + this.manaCost;
     }
 
 }

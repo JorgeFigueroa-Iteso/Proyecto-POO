@@ -29,6 +29,12 @@ public class MagicTheGatheringGUI implements ActionListener {
         title.setHorizontalAlignment(JLabel.CENTER);
         panel.add(title, BorderLayout.NORTH);
 
+        // Author's: Alvarez Camarena Juan Pablo, Figueroa Maya Jorge Ramon
+        JLabel authors = new JLabel("<html>- Alvarez Camarena Juan Pablo<br>- Figueroa Maya Jorge Ramon</html>");
+        authors.setFont(new Font("Arial", Font.BOLD, 10));
+        authors.setHorizontalAlignment(JLabel.LEFT);
+        panel.add(authors, BorderLayout.SOUTH);
+
         // Buttons
         JPanel buttons = new JPanel();
         buttons.setLayout(new GridLayout(2, 2));

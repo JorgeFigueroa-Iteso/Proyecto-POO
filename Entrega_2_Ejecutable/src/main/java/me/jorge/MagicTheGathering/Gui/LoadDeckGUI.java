@@ -32,7 +32,18 @@ public class LoadDeckGUI {
     private JPanel getPanel(JFrame frame, String name, JFileChooser deck){
 
         LoadDeck loadDeck = new LoadDeck();
-        loadDeck.loadDeck(name, deck);
+        loadDeck.loadDeck(deck);
+
+        // Monster Card Info from loadDeck object
+        String monsterCardInfo = loadDeck.getMonsterCardInfo();
+        // Instant Card Info from loadDeck object
+        String instantCardInfo = loadDeck.getInstantCardInfo();
+        // Mana1 Card Info from loadDeck object
+        String mana1CardInfo = loadDeck.getMana1CardInfo();
+        String mana2CardInfo = loadDeck.getMana2CardInfo();
+        String mana3CardInfo = loadDeck.getMana3CardInfo();
+        String mana4CardInfo = loadDeck.getMana4CardInfo();
+        String mana5CardInfo = loadDeck.getMana5CardInfo();
 
         //JPanel for 7 cards
         JPanel panel = new JPanel();
@@ -62,7 +73,7 @@ public class LoadDeckGUI {
             Text text = new Text();
             text.setX(40);
             text.setY(100);
-            text.setText("Card 1");
+            text.setText(monsterCardInfo);
             root.getChildren().add(text);
             card1.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         });
@@ -77,7 +88,7 @@ public class LoadDeckGUI {
             Text text = new Text();
             text.setX(40);
             text.setY(100);
-            text.setText("Card 2");
+            text.setText(instantCardInfo);
             root.getChildren().add(text);
             card2.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         });
@@ -92,7 +103,7 @@ public class LoadDeckGUI {
             Text text = new Text();
             text.setX(40);
             text.setY(100);
-            text.setText("Card 3");
+            text.setText(mana1CardInfo);
             root.getChildren().add(text);
             card3.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         });
@@ -107,7 +118,7 @@ public class LoadDeckGUI {
             Text text = new Text();
             text.setX(40);
             text.setY(100);
-            text.setText("Card 4");
+            text.setText(mana2CardInfo);
             root.getChildren().add(text);
             card4.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         });
@@ -122,7 +133,7 @@ public class LoadDeckGUI {
             Text text = new Text();
             text.setX(40);
             text.setY(100);
-            text.setText("Card 5");
+            text.setText(mana3CardInfo);
             root.getChildren().add(text);
             card5.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         });
@@ -137,7 +148,7 @@ public class LoadDeckGUI {
             Text text = new Text();
             text.setX(40);
             text.setY(100);
-            text.setText("Card 6");
+            text.setText(mana4CardInfo);
             root.getChildren().add(text);
             card6.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         });
@@ -152,7 +163,7 @@ public class LoadDeckGUI {
             Text text = new Text();
             text.setX(40);
             text.setY(100);
-            text.setText("Card 7");
+            text.setText(mana5CardInfo);
             root.getChildren().add(text);
             card7.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         });

@@ -44,12 +44,6 @@ public class Monster {
     // toString
     @Override
     public String toString() {
-        return "Monster{" +
-                "\n\t\"name\":\"" + name + "\",\n" +
-                "\t\"type\":\"" + type + "\",\n" +
-                "\t\"manaCost\":\"" + manaCost + "\",\n" +
-                "\t\"damage\":\"" + damage + "\",\n" +
-                "\t\"life\":\"" + life + "\"\n" +
-                "}";
+        return "Monster:  " + this.name + "\n\tType:  " + this.type + "\n\nMana:  " + this.manaCost + "\t\tDamage:  " + this.damage + "\n\t\tHP:  " + this.life;
     }
 }

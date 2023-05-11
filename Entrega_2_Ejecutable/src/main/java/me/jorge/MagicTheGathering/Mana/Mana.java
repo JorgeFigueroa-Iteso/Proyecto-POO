@@ -34,9 +34,6 @@ public class Mana {
     }
 
     public String toString() {
-        return "{\n" +
-                "\t\"manaType\": " + this.manaType + ",\n" +
-                "\t\"quantity\": " + this.quantity + "\n" +
-                "}";
+        return "Mana:  " + this.manaType + "\n\tQuantity:  " + this.quantity + "\n";
     }
 }
