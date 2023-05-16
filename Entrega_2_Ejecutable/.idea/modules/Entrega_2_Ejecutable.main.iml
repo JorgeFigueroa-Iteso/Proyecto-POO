@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="IntelliGuard" name="Obfuscation">
+      <configuration>
+        <option name="yGuardJar" value="D:\Intellij-2022\Plugins\yGard\yguard-bundle-3.0.0\lib\yguard-3.0.0.jar" />
+        <option name="mainclass" value="me.jorge.MagicTheGathering.Main" />
+        <option name="namingScheme" value="best" />
+      </configuration>
+    </facet>
+  </component>
+</module>

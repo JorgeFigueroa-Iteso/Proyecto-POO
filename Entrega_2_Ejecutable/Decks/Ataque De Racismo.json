@@ -1,0 +1,34 @@
+{
+  "Instant": [
+    "Ramoncito",
+    "Increases Monster's damage in 15%",
+    "1"
+  ],
+  "Mana1": [
+    "W",
+    "3"
+  ],
+  "Mana2": [
+    "U",
+    "3"
+  ],
+  "Mana3": [
+    "R",
+    "5"
+  ],
+  "Mana4": [
+    "G",
+    "2"
+  ],
+  "Mana5": [
+    "C",
+    "7"
+  ],
+  "Monster": [
+    "Luna Pussy Destoyer o:",
+    "Vampiro",
+    "7",
+    "3",
+    "7"
+  ]
+}

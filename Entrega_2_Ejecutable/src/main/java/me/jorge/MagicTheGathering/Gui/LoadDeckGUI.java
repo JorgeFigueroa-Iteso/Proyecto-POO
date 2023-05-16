@@ -21,6 +21,8 @@ public class LoadDeckGUI {
     private JPanel getPanel2(JFrame frame, String name, JFileChooser deck) {
         LoadDeck loadDeck = new LoadDeck();
         loadDeck.loadDeck(deck);
+        // Dispose on close
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         // Create a panel with 7 columns and 4 rows
         //JPanel for 7 cards
@@ -82,6 +84,7 @@ public class LoadDeckGUI {
         JLabel monsterCard = new JLabel("<html>" + cardInfo + "</html>");
         monsterCard.setFont(new Font("Arial", Font.BOLD, 14));
         monsterCard.setHorizontalAlignment(JLabel.LEFT);
+        monsterCard.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         card.add(monsterCard, BorderLayout.CENTER);
         panel.add(card);
         return panel;
@@ -95,6 +98,7 @@ public class LoadDeckGUI {
         JLabel monsterCard = new JLabel("<html>" + cardInfo + "</html>");
         monsterCard.setFont(new Font("Arial", Font.BOLD, 14));
         monsterCard.setHorizontalAlignment(JLabel.LEFT);
+        monsterCard.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         card.add(monsterCard, BorderLayout.CENTER);
         panel.add(card);
         return panel;
@@ -108,6 +112,7 @@ public class LoadDeckGUI {
         JLabel monsterCard = new JLabel("<html>" + cardInfo + "</html>");
         monsterCard.setFont(new Font("Arial", Font.BOLD, 14));
         monsterCard.setHorizontalAlignment(JLabel.LEFT);
+        monsterCard.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         card.add(monsterCard, BorderLayout.CENTER);
         panel.add(card);
         return panel;
