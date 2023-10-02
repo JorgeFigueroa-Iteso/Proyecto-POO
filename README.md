@@ -15,8 +15,8 @@ Este se realizará SIN interfaz gráfica, por lo que será en consola
 > Es un creador de mazo para el juego de cartas llamado Magic The Gathering
 
 ## Colaboradores
-- Juan Pablo Álvarez Camarena
-- Jorge Ramón Figueroa Maya
+- Juan Pablo A. C.
+- Jorge Ramón F. M.
 
 ## Inspectores
 - [x] ''
@@ -26,4 +26,4 @@ Este se realizará SIN interfaz gráfica, por lo que será en consola
 > En caso de querer usarlo, favor de contactarme [DISCORD](https://discordapp.com/users/778382750502748160)
 
 ## Estatus del proyecto
-En desarrollo
+Terminado
